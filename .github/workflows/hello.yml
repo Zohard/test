@@ -9,3 +9,16 @@ jobs:
         run: |
           echo 'Hello'
           echo 'World'
+  build:
+    name: Build Project
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Composer install
+        uses: php-actions/composer@v6
+
+      - name: PhpStan
+        uses: php-actions/phpstan@v3
+
