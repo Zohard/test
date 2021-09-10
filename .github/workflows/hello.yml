@@ -22,8 +22,8 @@ jobs:
       - name: Composer install
         uses: php-actions/composer@v6
 
-      - name: PhpStan
-        uses: php-actions/phpstan@v3
+#      - name: PhpStan
+#        uses: php-actions/phpstan@v3
 
   test_ouput:
     runs-on: ubuntu-18.04
