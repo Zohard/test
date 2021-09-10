@@ -10,4 +10,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Version
-        run: echo $GITHUB_REF
+        run: |
+          TAG=${$GITHUB_REF#refs/tags/}
+          echo set-output name=VERSION::${TAG}
+      - name: deploy
+        run: echo 'deploy version ${{ steps.version.outputs.VERSION }}'
