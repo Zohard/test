@@ -9,6 +9,9 @@ jobs:
         run: |
           echo 'Hello'
           echo 'World'
+      - name: connect
+        run: |
+          echo 'connect to my repo with ${{ secrets.MY_PASSWORD }}'
   build:
     name: Build Project
     runs-on: ubuntu-18.04
